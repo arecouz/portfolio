@@ -4,9 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import OssuTable from './OssuTable';
 
-const myAccordian = ({ label, content }) => {
+const MyAccordion = ({ label, content }) => {
   return (
     <Accordion type='single' collapsible>
       <AccordionItem value='item-1'>
@@ -17,4 +16,4 @@ const myAccordian = ({ label, content }) => {
   );
 };
 
-export default myAccordian;
+export default MyAccordion;

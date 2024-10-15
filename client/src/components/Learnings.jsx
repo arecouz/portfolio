@@ -1,9 +1,19 @@
-import MyAccordian from './MyAccordian';
-import OssuTable from './OssuTable';
+import MyAccordion from './MyAccordion';
+import OssuInfo from './OssuInfo';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/ui/popover';
 
 const Learnings = () => {
   return (
-    <MyAccordian label='Open Source Society University' content={OssuTable}></MyAccordian>
+    <>
+      <MyAccordion
+        label="Open Source Society University"
+        content={<OssuInfo />}
+      ></MyAccordion>
+    </>
   );
 };
 
