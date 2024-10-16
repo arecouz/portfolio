@@ -21,26 +21,24 @@ const NestableTable = ({ object }) => {
           <TableRow key={index}>
             <TableCell>
               <MyAccordion
-                label={item.section}
+                label={item.title}  
                 content={
                   <Table>
                     <TableBody>
-                      {item.courses_in_section.map((course, index) => (
+                      {item.parts.map((part, index) => (
                         <TableRow key={index}>
                           <TableCell>
                             <Drawer>
-                              <DrawerTrigger>{course.course}</DrawerTrigger>
+                              <DrawerTrigger>{part}</DrawerTrigger>  
                               <DrawerContent>
                                 <DrawerHeader>
-                                  <DrawerTitle className='text-center'>{course.course}</DrawerTitle>
+                                  <DrawerTitle className='text-center'>{part}</DrawerTitle>
                                   <DrawerDescription className="flex justify-center items-center">
-                               
-                                      <img
-                                        src="advanced_learning_algorithms_STANFORD.png"
-                                        className="max-w-[70%] max-h-[70vh]"
-                                        alt={course.course}
-                                      />
-                               
+                                    <img
+                                      src="advanced_learning_algorithms_STANFORD.png"  // Image can be updated or customized per course
+                                      className="max-w-[70%] max-h-[70vh]"
+                                      alt={part}
+                                    />
                                   </DrawerDescription>
                                 </DrawerHeader>
                               </DrawerContent>

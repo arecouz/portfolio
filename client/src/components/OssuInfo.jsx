@@ -1,66 +1,58 @@
 import NestableTable from './NestableTable';
 
 const OssuInfo = () => {
-
-  const coreComputerScience = [
-    { course: 'Systematic Program Design' },
-    { course: 'Programming Languages, (Parts A,B,C)' },
-    { course: 'Class-based Program Design' },
-    { course: 'Object-Oriented Design' },
-    { course: 'Software Architecture' },
-  ];
-  const maths = [
-      { course: 'Calculus: Differentiation' },
-      { course: 'Calculus: Integration' },
-      { course: 'Calculus: Coordinate Systems' },
-  ]
-  const systems = [
-    { course: 'The Missing Semester of Your CS Education' },
-    { course: 'Build a Modern Computer from First Principles: NAND to Tetris' },
-    { course: 'Operating Systems: Three Easy Pieces' },
-    {course: 'Computer Networking: a Top-Down Approach'}
-  ]
-
-  const theory = [
+  const ossu = [
     {
-      course:
+      title: 'Core Computer Science',
+      parts: [
+        'Systematic Program Design',
+        'Programming Languages, (Parts A,B,C)',
+        'Class-based Program Design',
+        'Object-Oriented Design',
+        'Software Architecture',
+      ],
+    },
+    {
+      title: 'Core Math',
+      parts: [
+        'Calculus: Differentiation',
+        'Calculus: Integration',
+        'Calculus: Coordinate Systems',
+      ],
+    },
+    {
+      title: 'Core Systems',
+      parts: [
+        'The Missing Semester of Your CS Education',
+        'Build a Modern Computer from First Principles: NAND to Tetris',
+        'Operating Systems: Three Easy Pieces',
+        'Computer Networking: a Top-Down Approach',
+      ],
+    },
+    {
+      title: 'Core Theory',
+      parts: [
         'Divide and Conquer, Sorting and Searching, and Randomized Algorithms',
-    },
-    { course: 'Graph Search, Shortest Paths, and Data Structures' },
-    {
-      course:
+        'Graph Search, Shortest Paths, and Data Structures',
         'Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming',
+        'Shortest Paths Revisited, NP-Complete Problems and What To Do About Them',
+      ],
     },
     {
-      course:
-        'Shortest Paths Revisited, NP-Complete Problems and What To Do About Them',
+      title: 'Core Applications',
+      parts: [
+        'Databases: Modeling and Theory',
+        'Databases: Relational Databases and SQL',
+        'Databases: Semistructured Data',
+        'Machine Learning: Supervised (regression and classification)',
+        'Machine Learning: Advanced Learning Algorithms',
+        'Machine Learning: Unsupervised Learning',
+        'Computer Graphics: 3D scenes, ray tracing',
+      ],
     },
-  ]
-
-  const applications = [
-    { course: 'Databases: Modeling and Theory' },
-    { course: 'Databases: Relational Databases and SQL' },
-    { course: 'Databases: Semistructured Data' },
-    { course: 'Machine Learning: Supervised (regression and classification)' },
-    {course: 'Machine Learning: Advanced Learning Algorithms'},
-    {course: 'Machine Learning: Unsupervised Learning'},
-    { course: 'Computer Graphics: 3D scenes, ray tracing' },
-    
-  ]
-
-  // ******************** // 
-  const courses = [
-    { section: 'Core CS', courses_in_section: coreComputerScience },
-    { section: 'Core math', courses_in_section: maths  },
-    { section: 'Core systems', courses_in_section: systems },
-    { section: 'Core theory', courses_in_section: theory },
-    { section: 'Core applications', courses_in_section: applications },
   ];
-  // ******************** // 
 
-  return (
-    <NestableTable object={courses}></NestableTable>
-  );
+  return <NestableTable object={ossu}></NestableTable>;
 };
 
 export default OssuInfo;

@@ -1,10 +1,7 @@
 import MyAccordion from './MyAccordion';
 import OssuInfo from './OssuInfo';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/ui/popover';
+import FullStackInfo from './FullStackInfo';
+
 
 const Learnings = () => {
   return (
@@ -12,6 +9,10 @@ const Learnings = () => {
       <MyAccordion
         label="Open Source Society University"
         content={<OssuInfo />}
+      ></MyAccordion>
+      <MyAccordion
+        label="Full Stack Open"
+        content={<FullStackInfo />}
       ></MyAccordion>
     </>
   );
