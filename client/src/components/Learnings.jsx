@@ -5,7 +5,7 @@ import FullStackInfo from './FullStackInfo';
 
 const Learnings = () => {
   return (
-    <>
+    <div className='p-4'>
       <MyAccordion
         label="Open Source Society University"
         content={<OssuInfo />}
@@ -14,7 +14,7 @@ const Learnings = () => {
         label="Full Stack Open"
         content={<FullStackInfo />}
       ></MyAccordion>
-    </>
+    </div>
   );
 };
 
