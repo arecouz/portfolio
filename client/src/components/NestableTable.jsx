@@ -32,9 +32,15 @@ const NestableTable = ({ object }) => {
                               <DrawerTrigger>{course.course}</DrawerTrigger>
                               <DrawerContent>
                                 <DrawerHeader>
-                                  <DrawerTitle>{course.course}</DrawerTitle>
-                                  <DrawerDescription>
-                                    <img src="advanced_learning_algorithms_STANFORD.png"></img>
+                                  <DrawerTitle className='text-center'>{course.course}</DrawerTitle>
+                                  <DrawerDescription className="flex justify-center items-center">
+                               
+                                      <img
+                                        src="advanced_learning_algorithms_STANFORD.png"
+                                        className="max-w-[70%] max-h-[70vh]"
+                                        alt={course.course}
+                                      />
+                               
                                   </DrawerDescription>
                                 </DrawerHeader>
                               </DrawerContent>
@@ -45,7 +51,7 @@ const NestableTable = ({ object }) => {
                     </TableBody>
                   </Table>
                 }
-              ></MyAccordion>
+              />
             </TableCell>
           </TableRow>
         ))}

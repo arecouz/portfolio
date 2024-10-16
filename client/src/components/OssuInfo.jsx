@@ -12,8 +12,7 @@ const OssuInfo = () => {
   const maths = [
       { course: 'Calculus: Differentiation' },
       { course: 'Calculus: Integration' },
-      { course: 'Class-based Program Design' },
-      { course: 'Calculus: Coordinate Systems & Infinite Series' },
+      { course: 'Calculus: Coordinate Systems' },
   ]
   const systems = [
     { course: 'The Missing Semester of Your CS Education' },
