@@ -5,10 +5,11 @@ const OssuInfo = () => {
     {
       title: 'Core Computer Science',
       parts: [
-        'Systematic Program Design',
+        'Intro to Computer Science and Python',
         'Programming Languages, (Parts A,B,C)',
         'Class-based Program Design',
         'Object-Oriented Design',
+        'Systematic Program Design',
         'Software Architecture',
       ],
     },
@@ -41,13 +42,13 @@ const OssuInfo = () => {
     {
       title: 'Core Applications',
       parts: [
-        'Databases: Modeling and Theory',
-        'Databases: Relational Databases and SQL',
-        'Databases: Semistructured Data',
         'Machine Learning: Supervised (regression and classification)',
         'Machine Learning: Advanced Learning Algorithms',
         'Machine Learning: Unsupervised Learning',
         'Computer Graphics: 3D scenes, ray tracing',
+        'Databases: Modeling and Theory',
+        'Databases: Relational Databases and SQL',
+        'Databases: Semistructured Data',
       ],
     },
   ];

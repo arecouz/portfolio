@@ -9,7 +9,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer';
-import { Button } from '@/components/ui/button';
+import { kebabCase } from 'lodash';
 
 import MyAccordion from './MyAccordion';
 
@@ -26,29 +26,34 @@ const NestableTable = ({ object }) => {
                 content={
                   <Table>
                     <TableBody>
-                      {item.parts.map((part, index) => (
-                        <TableRow key={index}>
-                          <TableCell>
-                            <Drawer>
-                              <DrawerTrigger>{part}</DrawerTrigger>
-                              <DrawerContent>
-                                <DrawerHeader>
-                                  <DrawerTitle className='text-center'>
-                                    {part}
-                                  </DrawerTitle>
-                                  <DrawerDescription className='flex justify-center items-center'>
-                                    <img
-                                      src='advanced_learning_algorithms_STANFORD.png' // Image can be updated or customized per course
-                                      className='max-w-[70%] max-h-[70vh]'
-                                      alt={part}
-                                    />
-                                  </DrawerDescription>
-                                </DrawerHeader>
-                              </DrawerContent>
-                            </Drawer>
-                          </TableCell>
-                        </TableRow>
-                      ))}
+                      {item.parts.map((part, index) => {
+                        const partName = kebabCase(part); // Convert to kebab-case
+                        console.log(partName); // Log the kebab-case part name
+
+                        return (
+                          <TableRow key={index}>
+                            <TableCell>
+                              <Drawer>
+                                <DrawerTrigger>{part}</DrawerTrigger>
+                                <DrawerContent>
+                                  <DrawerHeader>
+                                    <DrawerTitle className='text-center'>
+                                      {part}
+                                    </DrawerTitle>
+                                    <DrawerDescription className='flex justify-center items-center'>
+                                      <img
+                                        src={`${partName}.png`} // Image based on Kebab-Case of 'name'
+                                        className='max-w-[70%] max-h-[70vh]'
+                                        alt={part}
+                                      />
+                                    </DrawerDescription>
+                                  </DrawerHeader>
+                                </DrawerContent>
+                              </Drawer>
+                            </TableCell>
+                          </TableRow>
+                        );
+                      })}
                     </TableBody>
                   </Table>
                 }
