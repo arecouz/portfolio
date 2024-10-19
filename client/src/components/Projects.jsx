@@ -1,13 +1,18 @@
+import { Separator } from './ui/separator';
 import ProjectCard from './ProjectCard';
+
 const Projects = () => {
   return (
-    <div className="p-1 flex-wrap">
-      <ProjectCard
-        name={'Blogs List'}
-        link={'https://github.com/arecouz/FullStackOpen-BlogList-CI-CD'}
-        image={'image.png'}
-        description={`
-
+    <div>
+      <Separator />
+      <h2 className='underline text-center m-5'>Projects</h2>
+      {/* Responsive grid that adjusts based on screen size */}
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 p-3 m-3'>
+        <ProjectCard
+          name={'Blogs List'}
+          link={'https://github.com/arecouz/FullStackOpen-BlogList-CI-CD'}
+          image={'image.png'}
+          description={`
             The application consists of:
             
             Frontend: Built with React and Vite.
@@ -16,15 +21,39 @@ const Projects = () => {
             
             GitHub Actions workflow: Ensuring code quality through tests and deployment to Fly.io, followed by version tagging for releases.
           `}
-      ></ProjectCard>
-      <ProjectCard
-        name={'Blogs List'}
-        link={'https://github.com/arecouz/FullStackOpen-BlogList-CI-CD'}
-        image={'image.png'}
-        description={
-          `some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some some`
-        }
-      ></ProjectCard>
+        />
+        <ProjectCard
+          name={'nand2tetris'}
+          link={'https://github.com/arecouz/?'}
+          image={'nand.gif'}
+          description={`
+            Starting with the (virtual) construction of NAND gates, to build combinational and sequential logic, ultimately leading to a CPU. 
+            Then assemblers were built to translate binary code into machine code and machine code into 'Jack Code' (a high level language). 
+            An OS was then built to run Jack Code on the virtual machine. The Cookie Clicker is an example of the final program running on the system implemented.
+          `}
+        />
+        <ProjectCard
+          name={'Computer Graphics'}
+          link={'https://github.com/arecouz/?'}
+          image={'nand.gif'}
+          description={`
+            Starting with the (virtual) construction of NAND gates, to build combinational and sequential logic, ultimately leading to a CPU. 
+            Then assemblers were built to translate binary code into machine code and machine code into 'Jack Code' (a high level language). 
+            An OS was then built to run Jack Code on the virtual machine. The Cookie Clicker is an example of the final program running on the system implemented.
+          `}
+        />
+        <ProjectCard
+          name={'Another Project'}
+          link={'https://github.com/arecouz/?'}
+          image={'nand.gif'}
+          description={`
+            Starting with the (virtual) construction of NAND gates, to build combinational and sequential logic, ultimately leading to a CPU. 
+            Then assemblers were built to translate binary code into machine code and machine code into 'Jack Code' (a high level language). 
+            An OS was then built to run Jack Code on the virtual machine. The Cookie Clicker is an example of the final program running on the system implemented.
+          `}
+        />
+        {/* Next Project Here */}
+      </div>
     </div>
   );
 };

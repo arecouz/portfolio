@@ -6,28 +6,52 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+
+
 
 const ProjectCard = ({ name, link, image, description }) => {
   return (
-    <Card >
-      <CardHeader>
-        <CardTitle>{name}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="flex flex-col sm:flex-row sm:space-x-4">
+    <Drawer>
+    <DrawerTrigger> <Card
+        className='
+      transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg
+      
+    '
+      >
+        <CardHeader>
+          <CardTitle className='text-center'>{name}</CardTitle>
+        </CardHeader>
+        <CardContent className='text-center'>
+          <p>some content</p>
+        </CardContent>
+      </Card></DrawerTrigger>
+    <DrawerContent>
+      <DrawerHeader>
+        <DrawerTitle className='text-center'>
+          {name}
+        </DrawerTitle>
+        <DrawerDescription className='flex justify-center items-center'>
           <img
-            src={image} // Replace with your image source
-            alt={image}
-            className="w-full sm:w-1/2 h-auto rounded-md object-contain" // Image takes full width on small screens and half on small screens and up
+            src={image} // Image can be updated or customized per course
+            className='max-w-[100%] max-h-[80vh]'
+            alt={name}
           />
-          <div className="w-full sm:w-1/2 flex items-center justify-center p-4 rounded-md">
-            <p>
-              {description}
-            </p>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
+        </DrawerDescription>
+      </DrawerHeader>
+    </DrawerContent>
+  </Drawer>
+
   );
 };
 

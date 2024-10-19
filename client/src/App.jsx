@@ -5,11 +5,15 @@ import Projects from './components/Projects';
 
 const App = () => {
   return (
-    <div className='min-w-[320px] max-w-screen-lg mx-auto p-4'>
-      <Header />
-      <AboutMe />
-      <Learnings />
-      <Projects />
+    <div>
+      <div className='min-w-[320px] max-w-screen-lg mx-auto p-4'>
+        <Header />
+        <AboutMe />
+        <Learnings />
+      </div>
+      <div className='max-w-5xl mx-auto'>
+        <Projects />
+      </div>
     </div>
   );
 };
