@@ -32,25 +32,28 @@ const NestableTable = ({ object }) => {
 
                         return (
                           <TableRow key={index}>
-                            <TableCell>
-                              <Drawer>
-                                <DrawerTrigger>{part}</DrawerTrigger>
-                                <DrawerContent>
-                                  <DrawerHeader>
-                                    <DrawerTitle className='text-center'>
-                                      {part}
-                                    </DrawerTitle>
-                                    <DrawerDescription className='flex justify-center items-center'>
-                                      <img
-                                        src={`${partName}.png`} // Image based on Kebab-Case of 'name'
-                                        className='max-w-[70%] max-h-[70vh]'
-                                        alt={part}
-                                      />
-                                    </DrawerDescription>
-                                  </DrawerHeader>
-                                </DrawerContent>
-                              </Drawer>
-                            </TableCell>
+                            <Drawer>
+                              {/* Make the entire TableCell a trigger */}
+                              <DrawerTrigger asChild>
+                                <TableCell className='cursor-pointer'>
+                                  {part}
+                                </TableCell>
+                              </DrawerTrigger>
+                              <DrawerContent>
+                                <DrawerHeader>
+                                  <DrawerTitle className='text-center'>
+                                    {part}
+                                  </DrawerTitle>
+                                  <DrawerDescription className='flex justify-center items-center'>
+                                    <img
+                                      src={`${partName}.png`} // Image based on Kebab-Case of 'name'
+                                      className='max-w-[70%] max-h-[70vh]'
+                                      alt={part}
+                                    />
+                                  </DrawerDescription>
+                                </DrawerHeader>
+                              </DrawerContent>
+                            </Drawer>
                           </TableRow>
                         );
                       })}

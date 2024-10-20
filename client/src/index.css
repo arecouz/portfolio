@@ -82,3 +82,14 @@ p {
   @apply text-base leading-relaxed tracking-tight;
 }
 
+@keyframes jiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(2.5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-jiggle {
+  animation: jiggle 0.3s ease-in-out; /* Adjust duration and timing function as needed */
+}

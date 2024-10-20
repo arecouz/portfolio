@@ -2,6 +2,7 @@ import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Learnings from './components/Learnings';
 import Projects from './components/Projects';
+import { Toaster } from "@/components/ui/toaster"
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <div className='max-w-5xl mx-auto'>
         <Projects />
       </div>
+      <Toaster />
     </div>
   );
 };

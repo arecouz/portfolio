@@ -6,28 +6,10 @@ const OssuInfo = () => {
       title: 'Core Computer Science',
       parts: [
         'Intro to Computer Science and Python',
-        'Programming Languages, (Parts A,B,C)',
-        'Class-based Program Design',
         'Object-Oriented Design',
         'Systematic Program Design',
         'Software Architecture',
-      ],
-    },
-    {
-      title: 'Core Math',
-      parts: [
-        'Calculus: Differentiation',
-        'Calculus: Integration',
-        'Calculus: Coordinate Systems',
-      ],
-    },
-    {
-      title: 'Core Systems',
-      parts: [
-        'The Missing Semester of Your CS Education',
-        'Build a Modern Computer from First Principles: NAND to Tetris',
-        'Operating Systems: Three Easy Pieces',
-        'Computer Networking: a Top-Down Approach',
+        'Programming Languages, (Parts A,B,C)',
       ],
     },
     {
@@ -49,6 +31,23 @@ const OssuInfo = () => {
         'Databases: Modeling and Theory',
         'Databases: Relational Databases and SQL',
         'Databases: Semistructured Data',
+      ],
+    },
+    {
+      title: 'Core Systems',
+      parts: [
+        'The Missing Semester of Your CS Education',
+        'Build a Modern Computer from First Principles: NAND to Tetris',
+        'Operating Systems: Three Easy Pieces',
+        'Computer Networking: a Top-Down Approach',
+      ],
+    },
+    {
+      title: 'Core Math',
+      parts: [
+        'Calculus: Differentiation',
+        'Calculus: Integration',
+        'Calculus: Coordinate Systems',
       ],
     },
   ];
