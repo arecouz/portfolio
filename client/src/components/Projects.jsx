@@ -7,10 +7,10 @@ const Projects = () => {
       <Separator />
       <h2 className='underline text-center m-5'>Projects</h2>
       {/* Responsive grid that adjusts based on screen size */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 p-3 m-3'>
-        <ProjectCard
-          name={'Blogs List'}
-          link={'https://github.com/arecouz/FullStackOpen-BlogList-CI-CD'}
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 m-8'>
+      <ProjectCard
+          name={'This Website'}
+          link={'https://couzens.fly.dev/'}
           image={'image.png'}
           description={`
             The application consists of:
@@ -21,6 +21,12 @@ const Projects = () => {
             
             GitHub Actions workflow: Ensuring code quality through tests and deployment to Fly.io, followed by version tagging for releases.
           `}
+        />
+        <ProjectCard
+          name={'Blogs List'}
+          link={'https://github.com/arecouz/FullStackOpen-BlogList-CI-CD'}
+          image={'image.png'}
+          description={`Literraly just the website your on`}
         />
         <ProjectCard
           name={'nand2tetris'}
