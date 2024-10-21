@@ -1,16 +1,15 @@
+import { useState } from 'react';
 import { Table, TableBody, TableRow, TableCell } from '@/components/ui/table';
 import {
   Drawer,
-  DrawerClose,
+  DrawerTrigger,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
-  DrawerTrigger,
+  DrawerDescription,
 } from '@/components/ui/drawer';
+import { Skeleton } from '@/components/ui/skeleton'; // Import Skeleton component
 import { kebabCase } from 'lodash';
-
 import MyAccordion from './MyAccordion';
 
 const NestableTable = ({ object }) => {
@@ -27,13 +26,15 @@ const NestableTable = ({ object }) => {
                   <Table>
                     <TableBody>
                       {item.parts.map((part, index) => {
-                        const partName = kebabCase(part); // Convert to kebab-case
-                        console.log(partName); // Log the kebab-case part name
+                        const [isLoading, setIsLoading] = useState(true);
+                        const partName = kebabCase(part);
+
+                        const handleImageLoad = () => setIsLoading(false);
+                        const handleImageError = () => setIsLoading(false); // hide Skeleton on error too
 
                         return (
                           <TableRow key={index}>
                             <Drawer>
-                              {/* Make the entire TableCell a trigger */}
                               <DrawerTrigger asChild>
                                 <TableCell className='cursor-pointer'>
                                   {part}
@@ -44,13 +45,23 @@ const NestableTable = ({ object }) => {
                                   <DrawerTitle className='text-center'>
                                     {part}
                                   </DrawerTitle>
-                                  <DrawerDescription className='flex justify-center items-center'>
+                                  <DrawerDescription />
+                                  <div className='flex justify-center items-center flex-col'>
+                                    {/* Show Skeleton while loading */}
+                                    {isLoading && (
+                                      <Skeleton className='w-[70%] h-[25vh] mb-4 rounded-lg' />
+                                    )}
+
                                     <img
-                                      src={`${partName}.png`} // Image based on Kebab-Case of 'name'
-                                      className='max-w-[70%] max-h-[70vh]'
+                                      src={`${partName}.png`}
+                                      className={`max-w-[70%] max-h-[70vh] ${
+                                        isLoading ? 'hidden' : ''
+                                      }`}
                                       alt={part}
+                                      onLoad={handleImageLoad}
+                                      onError={handleImageError}
                                     />
-                                  </DrawerDescription>
+                                  </div>
                                 </DrawerHeader>
                               </DrawerContent>
                             </Drawer>

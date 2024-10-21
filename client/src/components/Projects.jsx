@@ -43,7 +43,7 @@ const Projects = () => {
           `}
         />
         <ProjectCard
-          name={'Another Project'}
+          name={'Repo Mobile App'}
           link={'https://github.com/arecouz/?'}
           image={'nand.gif'}
           description={`
