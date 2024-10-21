@@ -49,12 +49,12 @@ const NestableTable = ({ object }) => {
                                   <div className='flex justify-center items-center flex-col'>
                                     {/* Show Skeleton while loading */}
                                     {isLoading && (
-                                      <Skeleton className='w-[70%] h-[25vh] mb-4 rounded-lg' />
+                                      <Skeleton className='w-full h-[2vh] mb-4 rounded-lg' />
                                     )}
 
                                     <img
                                       src={`${partName}.png`}
-                                      className={`max-w-[70%] max-h-[70vh] ${
+                                      className={`max-w-[80%] ${
                                         isLoading ? 'hidden' : ''
                                       }`}
                                       alt={part}
