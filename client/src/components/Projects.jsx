@@ -5,28 +5,12 @@ const Projects = () => {
   return (
     <div>
       <Separator />
-      <h2 className='underline text-center m-5'>Projects</h2>
-      {/* Responsive grid that adjusts based on screen size */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 m-8'>
-      <ProjectCard
-          name={'This Website'}
-          link={'https://couzens.fly.dev/'}
-          image={'image.png'}
-          description={`
-            The application consists of:
-            
-            Frontend: Built with React and Vite.
-            
-            Backend: A REST API built with Express and MongoDB.
-            
-            GitHub Actions workflow: Ensuring code quality through tests and deployment to Fly.io, followed by version tagging for releases.
-          `}
-        />
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 m-8">
         <ProjectCard
-          name={'Blogs List'}
-          link={'https://github.com/arecouz/FullStackOpen-BlogList-CI-CD'}
-          image={'image.png'}
-          description={`Literraly just the website your on`}
+          name={'CineTrack'}
+          link={'/cinetrack'}
+          pitch={'track your movies'}
+          libraries={`react, vite, express, mongoDB, API's, user authentication`}
         />
         <ProjectCard
           name={'nand2tetris'}
